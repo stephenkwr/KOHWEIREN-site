@@ -14,4 +14,8 @@ Open `public/index.html` directly in a browser — no local server needed.
 
 ## Deploy
 
-Push to `main`. GitHub Actions publishes to GitHub Pages automatically.
+1. Go to **Settings → Pages** in this repo.
+2. Under *Build and deployment*, set Source to **GitHub Actions**.
+3. Push to `main` — the workflow in `.github/workflows/deploy.yml` publishes `public/` automatically.
+
+The live URL will be `https://stephenkwr.github.io/KOHWEIREN-site/`.

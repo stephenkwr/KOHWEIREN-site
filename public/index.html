@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Koh Wei Ren — Software Engineer based in Singapore. Building clean, purposeful software." />
+  <title>Koh Wei Ren</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav" role="banner">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__brand">KWR<span class="nav__brand-dot">.</span></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav__links" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#repos">Repos</a></li>
+          <li><a href="#contact" class="nav__cta">Let's talk</a></li>
+        </ul>
+      </nav>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav__mobile" id="nav-mobile" aria-label="Mobile navigation" hidden>
+      <ul role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#repos">Repos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── Hero ── -->
+    <section id="hero">
+      <div class="hero__inner container">
+        <p class="hero__eyebrow">Software Engineer</p>
+        <h1 class="hero__name">Koh<br />Wei Ren</h1>
+        <p class="hero__sub">Building precise, purposeful software —<br />from the database to the interface.</p>
+        <ul class="hero__actions" role="list">
+          <li><a href="#contact" class="btn btn--outline">Get in touch</a></li>
+          <li><a href="https://github.com/stephenkwr" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/weirenkoh" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">LinkedIn ↗</a></li>
+        </ul>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About">↓</a>
+    </section>
+
+    <!-- ── About ── -->
+    <section id="about" class="section">
+      <div class="container section__grid">
+        <div class="section__label" aria-hidden="true">About</div>
+        <div class="section__body">
+          <h2 class="section__heading">Turning complexity<br />into clarity</h2>
+          <div class="about__text">
+            <p>I'm a software engineering student at Singapore Institute of Technology, drawn to problems that sit at the intersection of systems thinking and human experience. I gravitate toward work where the right abstraction makes everything simpler.</p>
+            <p>I build across the stack — writing Python and Java for back-end logic, working with relational databases, and crafting clean front-end interfaces. I care about code that is readable, tested, and easy to hand off.</p>
+            <p>Currently open to internship and graduate roles where I can contribute to real products and keep learning fast.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Skills ── -->
+    <section id="skills" class="section section--tinted">
+      <div class="container section__grid">
+        <div class="section__label" aria-hidden="true">Skills</div>
+        <div class="section__body">
+          <h2 class="section__heading">Areas of focus</h2>
+          <div class="skills__groups">
+            <div class="skill-group">
+              <p class="skill-group__name">Languages</p>
+              <ul class="skill-group__list" role="list">
+                <li class="skill-pill">Python</li>
+                <li class="skill-pill">Java</li>
+                <li class="skill-pill">JavaScript</li>
+                <li class="skill-pill">C / C++</li>
+                <li class="skill-pill">SQL</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <p class="skill-group__name">Web &amp; APIs</p>
+              <ul class="skill-group__list" role="list">
+                <li class="skill-pill">HTML &amp; CSS</li>
+                <li class="skill-pill">React</li>
+                <li class="skill-pill">Node.js</li>
+                <li class="skill-pill">REST APIs</li>
+                <li class="skill-pill">Flask / FastAPI</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <p class="skill-group__name">Tools &amp; Infrastructure</p>
+              <ul class="skill-group__list" role="list">
+                <li class="skill-pill">Git &amp; GitHub</li>
+                <li class="skill-pill">Docker</li>
+                <li class="skill-pill">Linux</li>
+                <li class="skill-pill">MySQL / PostgreSQL</li>
+                <li class="skill-pill">GitHub Actions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Projects ── -->
+    <section id="projects" class="section">
+      <div class="container section__grid">
+        <div class="section__label" aria-hidden="true">Projects</div>
+        <div class="section__body">
+          <h2 class="section__heading">Selected work</h2>
+          <div class="cards-grid">
+            <article class="card">
+              <div class="card__header">
+                <h3 class="card__title">Project One</h3>
+                <span class="card__badge">Web App</span>
+              </div>
+              <p class="card__desc">Full-stack application for collaborative task management with real-time updates. React front end, Node.js API, PostgreSQL — deployed to AWS.</p>
+              <a href="#" class="card__link" target="_blank" rel="noopener noreferrer">View project ↗</a>
+            </article>
+            <article class="card">
+              <div class="card__header">
+                <h3 class="card__title">Project Two</h3>
+                <span class="card__badge">CLI Tool</span>
+              </div>
+              <p class="card__desc">Command-line tool that automates local development environment setup, cutting onboarding time from hours to minutes for new team members.</p>
+              <a href="#" class="card__link" target="_blank" rel="noopener noreferrer">View project ↗</a>
+            </article>
+            <article class="card">
+              <div class="card__header">
+                <h3 class="card__title">Project Three</h3>
+                <span class="card__badge">Data Pipeline</span>
+              </div>
+              <p class="card__desc">Automated pipeline for classifying and tagging unstructured text at scale using Python. Reduced manual labelling effort by over 80%.</p>
+              <a href="#" class="card__link" target="_blank" rel="noopener noreferrer">View project ↗</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Repos ── -->
+    <section id="repos" class="section section--tinted">
+      <div class="container section__grid">
+        <div class="section__label" aria-hidden="true">Repos</div>
+        <div class="section__body">
+          <h2 class="section__heading">On GitHub</h2>
+          <div id="repos-grid" class="cards-grid" aria-live="polite">
+            <p class="state-msg">Loading repositories…</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section id="contact" class="section section--dark">
+      <div class="container section__grid">
+        <div class="section__label section__label--light" aria-hidden="true">Contact</div>
+        <div class="section__body">
+          <h2 class="section__heading section__heading--light">Let's build<br />something</h2>
+          <p class="contact__intro">I'm actively looking for internship and graduate roles. If you have an interesting problem, I'd like to hear about it.</p>
+          <ul class="contact__links" role="list">
+            <li>
+              <a href="mailto:2202110@sit.singaporetech.edu.sg" class="contact__link">
+                <span class="contact__link-label">Email</span>
+                <span class="contact__link-value">2202110@sit.singaporetech.edu.sg</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/stephenkwr" target="_blank" rel="noopener noreferrer" class="contact__link">
+                <span class="contact__link-label">GitHub</span>
+                <span class="contact__link-value">github.com/stephenkwr ↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/weirenkoh" target="_blank" rel="noopener noreferrer" class="contact__link">
+                <span class="contact__link-label">LinkedIn</span>
+                <span class="contact__link-value">linkedin.com/in/weirenkoh ↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Koh Wei Ren · Built with plain HTML, CSS &amp; JS</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
