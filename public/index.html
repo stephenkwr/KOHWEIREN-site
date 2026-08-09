@@ -1,203 +1,334 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Koh Wei Ren — Software Engineer based in Singapore. Building clean, purposeful software." />
-  <title>Koh Wei Ren</title>
+  <meta name="description" content="Koh Wei Ren is a Singapore-based software engineer focused on automation, systems, and practical tools that reduce human effort." />
+  <meta name="theme-color" content="#080b0a" />
+  <meta property="og:title" content="Koh Wei Ren | Automation-focused Software Engineer" />
+  <meta property="og:description" content="Aircraft engineering discipline. Software systems thinking. Automation with measurable impact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://stephenkwr.github.io/KOHWEIREN-site/assets/wei-ren.jpg" />
+  <title>Koh Wei Ren | Automation-focused Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="nav" id="nav" role="banner">
-    <div class="nav__inner container">
-      <a href="#hero" class="nav__brand">KWR<span class="nav__brand-dot">.</span></a>
-      <nav aria-label="Main navigation">
-        <ul class="nav__links" role="list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#repos">Repos</a></li>
-          <li><a href="#contact" class="nav__cta">Let's talk</a></li>
-        </ul>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#hero" aria-label="Koh Wei Ren, home">
+        <span>KWR</span><span class="nav__brand-mark" aria-hidden="true"></span>
+      </a>
+
+      <nav class="nav__desktop" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Capabilities</a>
+        <a href="#projects">Work</a>
+        <a href="#repos">Repositories</a>
+        <a class="nav__contact" href="#contact">Contact</a>
       </nav>
-      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
-        <span></span><span></span><span></span>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
       </button>
     </div>
-    <nav class="nav__mobile" id="nav-mobile" aria-label="Mobile navigation" hidden>
-      <ul role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#repos">Repos</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+
+    <nav class="nav__mobile" id="mobile-menu" aria-label="Mobile navigation" hidden>
+      <a href="#about">About</a>
+      <a href="#skills">Capabilities</a>
+      <a href="#projects">Work</a>
+      <a href="#repos">Repositories</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <canvas id="signal-canvas" aria-hidden="true"></canvas>
 
-    <!-- ── Hero ── -->
-    <section id="hero">
-      <div class="hero__inner container">
-        <p class="hero__eyebrow">Software Engineer</p>
-        <h1 class="hero__name">Koh<br />Wei Ren</h1>
-        <p class="hero__sub">Automating complex work —<br />building software that does the heavy lifting.</p>
-        <ul class="hero__actions" role="list">
-          <li><a href="#contact" class="btn btn--outline">Get in touch</a></li>
-          <li><a href="https://github.com/stephenkwr" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">GitHub ↗</a></li>
-          <li><a href="https://www.linkedin.com/in/weirenkoh" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">LinkedIn ↗</a></li>
-        </ul>
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/wei-ren.jpg" alt="" width="1051" height="817" fetchpriority="high" />
+        <div class="hero__media-code">KWR / SG / 2026</div>
       </div>
-      <a href="#about" class="hero__scroll" aria-label="Scroll to About">↓</a>
-    </section>
 
-    <!-- ── About ── -->
-    <section id="about" class="section">
-      <div class="container section__grid">
-        <div class="section__label" aria-hidden="true">About</div>
-        <div class="section__body">
-          <h2 class="section__heading">Turning complexity<br />into clarity</h2>
-          <div class="about__text">
-            <p>I'm a final-year software engineering student at Singapore Institute of Technology, graduating this year and actively looking for graduate roles. I came to software through aerospace engineering — studying high-stakes systems where precision and failure costs are both extreme trained me to reason carefully about problems before reaching for a keyboard.</p>
-            <p>What drives me is automation. Taking a process that consumes time and mental energy, breaking it down to its essential steps, and rebuilding it in software so a machine handles it reliably — that is where I do my best work. I've applied this to financial reporting, embedded systems test workflows, and image validation pipelines.</p>
-            <p>I write primarily in Python, with experience in Java and JavaScript, and I care about producing code that is readable, testable, and easy to hand off. If you are building something where software should be doing more of the heavy lifting, I would like to talk.</p>
+      <div class="container hero__layout">
+        <div class="hero__copy">
+          <p class="availability"><span aria-hidden="true"></span>Open to graduate roles</p>
+          <h1 id="hero-title" class="hero__title"><span>Koh</span><span>Wei Ren</span></h1>
+          <p class="hero__role">Automation-focused software engineer</p>
+          <p class="hero__lede">I turn complex, repetitive work into reliable software, combining aircraft engineering discipline with production automation and systems programming.</p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#projects">See the work <span aria-hidden="true">&#8595;</span></a>
+            <a class="button button--quiet" href="mailto:koh.weiren@gmail.com">Email me <span aria-hidden="true">&#8599;</span></a>
           </div>
+
+          <div class="hero__socials" aria-label="Social links">
+            <a href="https://github.com/stephenkwr" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&#8599;</span></a>
+            <a href="https://www.linkedin.com/in/weirenkoh" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+
+        <div class="hero__readout" aria-hidden="true">
+          <span>INPUT</span>
+          <i></i>
+          <span>ANALYSE</span>
+          <i></i>
+          <span>AUTOMATE</span>
+          <i></i>
+          <span>IMPROVE</span>
         </div>
       </div>
     </section>
 
-    <!-- ── Skills ── -->
-    <section id="skills" class="section section--tinted">
-      <div class="container section__grid">
-        <div class="section__label" aria-hidden="true">Skills</div>
-        <div class="section__body">
-          <h2 class="section__heading">Areas of focus</h2>
-          <div class="skills__groups">
-            <div class="skill-group">
-              <p class="skill-group__name">Languages</p>
-              <ul class="skill-group__list" role="list">
-                <li class="skill-pill">Python</li>
-                <li class="skill-pill">Java</li>
-                <li class="skill-pill">JavaScript</li>
-                <li class="skill-pill">C / C++</li>
-                <li class="skill-pill">SQL</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <p class="skill-group__name">Web &amp; APIs</p>
-              <ul class="skill-group__list" role="list">
-                <li class="skill-pill">HTML &amp; CSS</li>
-                <li class="skill-pill">React</li>
-                <li class="skill-pill">Node.js</li>
-                <li class="skill-pill">REST APIs</li>
-                <li class="skill-pill">Flask / FastAPI</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <p class="skill-group__name">Tools &amp; Infrastructure</p>
-              <ul class="skill-group__list" role="list">
-                <li class="skill-pill">Git &amp; GitHub</li>
-                <li class="skill-pill">Docker</li>
-                <li class="skill-pill">Linux</li>
-                <li class="skill-pill">MySQL / PostgreSQL</li>
-                <li class="skill-pill">GitHub Actions</li>
-              </ul>
-            </div>
-          </div>
+    <aside class="impact-strip" aria-label="Career highlights">
+      <div class="container impact-strip__grid">
+        <div class="impact-stat">
+          <strong><span data-count="97">97</span>%</strong>
+          <span>less test effort</span>
+        </div>
+        <div class="impact-stat">
+          <strong>48 <small>to</small> 1.5h</strong>
+          <span>per test cycle</span>
+        </div>
+        <div class="impact-stat">
+          <strong><span data-count="5">5</span> years</strong>
+          <span>aircraft engineering</span>
+        </div>
+        <div class="impact-stat">
+          <strong>Hons with Merit</strong>
+          <span>Computer Science, 2026</span>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <!-- ── Projects ── -->
-    <section id="projects" class="section">
-      <div class="container section__grid">
-        <div class="section__label" aria-hidden="true">Projects</div>
-        <div class="section__body">
-          <h2 class="section__heading">Selected work</h2>
-          <div class="cards-grid">
-            <article class="card">
-              <div class="card__header">
-                <h3 class="card__title">Finance Automation Dashboard</h3>
-                <span class="card__badge">Dashboard</span>
-              </div>
-              <p class="card__desc">Python dashboard that automates the calculation of financial indicators, replacing repetitive manual spreadsheet work with instant visual reports.</p>
-              <a href="https://github.com/stephenkwr/finance-automation-dashboard" class="card__link" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
-            </article>
-            <article class="card">
-              <div class="card__header">
-                <h3 class="card__title">CANoe Automation</h3>
-                <span class="card__badge">Automation</span>
-              </div>
-              <p class="card__desc">RPA tool that automates audio measurement workflows in CANoe, cutting manual test cycles for embedded systems and automotive software teams.</p>
-              <a href="https://github.com/stephenkwr/CANoe_automation" class="card__link" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
-            </article>
-            <article class="card">
-              <div class="card__header">
-                <h3 class="card__title">Image Comparison Tool</h3>
-                <span class="card__badge">Python Tool</span>
-              </div>
-              <p class="card__desc">Compares images against reference figures and tables while handling resolution differences — useful for automated visual regression and document validation.</p>
-              <a href="https://github.com/stephenkwr/image_comparison" class="card__link" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
-            </article>
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-heading reveal">
+          <p class="section-kicker">01 / About</p>
+          <h2 id="about-title">From aircraft systems<br />to software systems.</h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__statement reveal">
+            <p>I started in aerospace, where precision is operational, not optional. Five years maintaining aircraft taught me to diagnose methodically, document clearly, and take ownership when systems have to work.</p>
+            <p>I carried that mindset into computer science and found my focus in automation: understand the real workflow, remove unnecessary human effort, and build a tool people can trust.</p>
+            <blockquote>My best work begins with a messy process and ends with a repeatable system.</blockquote>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ── Repos ── -->
-    <section id="repos" class="section section--tinted">
-      <div class="container section__grid">
-        <div class="section__label" aria-hidden="true">Repos</div>
-        <div class="section__body">
-          <h2 class="section__heading">On GitHub</h2>
-          <div id="repos-grid" class="cards-grid" aria-live="polite">
-            <p class="state-msg">Loading repositories…</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Contact ── -->
-    <section id="contact" class="section section--dark">
-      <div class="container section__grid">
-        <div class="section__label section__label--light" aria-hidden="true">Contact</div>
-        <div class="section__body">
-          <h2 class="section__heading section__heading--light">Let's build<br />something</h2>
-          <p class="contact__intro">I'm graduating this year and actively seeking graduate software engineering roles, with a focus on automation and systems work. If you have a hard problem that software should be solving, I'd like to hear about it.</p>
-          <ul class="contact__links" role="list">
+          <ol class="timeline reveal" aria-label="Career path">
             <li>
-              <a href="mailto:koh.weiren@gmail.com" class="contact__link">
-                <span class="contact__link-label">Email</span>
-                <span class="contact__link-value">koh.weiren@gmail.com</span>
-              </a>
+              <time>2017 - 2022</time>
+              <div>
+                <h3>Aircraft engineering</h3>
+                <p>Maintained operational readiness in the RSAF under strict safety and compliance standards.</p>
+              </div>
             </li>
             <li>
-              <a href="https://github.com/stephenkwr" target="_blank" rel="noopener noreferrer" class="contact__link">
-                <span class="contact__link-label">GitHub</span>
-                <span class="contact__link-value">github.com/stephenkwr ↗</span>
-              </a>
+              <time>2022 - 2026</time>
+              <div>
+                <h3>Computer science</h3>
+                <p>Built real-time systems and custom engine technology in C and C++. Graduated with Honours with Merit.</p>
+              </div>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/weirenkoh" target="_blank" rel="noopener noreferrer" class="contact__link">
-                <span class="contact__link-label">LinkedIn</span>
-                <span class="contact__link-value">linkedin.com/in/weirenkoh ↗</span>
-              </a>
+              <time>2025 - 2026</time>
+              <div>
+                <h3>Production automation</h3>
+                <p>Owned an internal automotive audio-test automation tool from requirements through deployment.</p>
+              </div>
             </li>
-          </ul>
+            <li class="timeline__now">
+              <time>Now</time>
+              <div>
+                <h3>Ready for the next system</h3>
+                <p>Seeking graduate and entry-level roles in automation, software tooling, testing, and systems engineering.</p>
+              </div>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
 
+    <section id="skills" class="section capabilities" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-heading section-heading--split reveal">
+          <div>
+            <p class="section-kicker">02 / Capabilities</p>
+            <h2 id="skills-title">Built for useful<br />engineering work.</h2>
+          </div>
+          <p>I work across the path from understanding a manual process to shipping the software that replaces it.</p>
+        </header>
+
+        <div class="capability-list">
+          <article class="capability reveal">
+            <span class="capability__number">01</span>
+            <div>
+              <h3>Automation &amp; testing</h3>
+              <p>Break down GUI and hardware-assisted workflows, connect tools, handle edge cases, and make the result usable by other engineers.</p>
+            </div>
+            <ul aria-label="Automation and testing technologies">
+              <li>Python</li><li>pywinauto</li><li>Vector CANoe</li><li>ARTA</li><li>REST APIs</li><li>GUI / CLI tools</li>
+            </ul>
+          </article>
+
+          <article class="capability reveal">
+            <span class="capability__number">02</span>
+            <div>
+              <h3>Systems programming</h3>
+              <p>Build performance-conscious software, engine infrastructure, and scripting integrations with a strong grasp of system boundaries.</p>
+            </div>
+            <ul aria-label="Systems programming technologies">
+              <li>C++</li><li>C</li><li>C#</li><li>CMake</li><li>Mono</li><li>Linux</li>
+            </ul>
+          </article>
+
+          <article class="capability reveal">
+            <span class="capability__number">03</span>
+            <div>
+              <h3>Data pipelines &amp; APIs</h3>
+              <p>Move data from collection to tested models and practical interfaces, with repeatable workflows and observable results.</p>
+            </div>
+            <ul aria-label="Data pipeline technologies">
+              <li>SQL</li><li>FastAPI</li><li>DuckDB</li><li>dbt</li><li>Airflow</li><li>GitHub Actions</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-heading section-heading--split reveal">
+          <div>
+            <p class="section-kicker">03 / Selected work</p>
+            <h2 id="projects-title">Proof, not<br />placeholders.</h2>
+          </div>
+          <p>Work I can explain from the requirements and trade-offs through to the implementation and outcome.</p>
+        </header>
+
+        <div class="project-list">
+          <article class="project reveal" data-tilt>
+            <div class="project__visual automation-visual" aria-hidden="true">
+              <div class="automation-node automation-node--one"><small>01</small> CANoe</div>
+              <div class="automation-node automation-node--two"><small>02</small> RPA</div>
+              <div class="automation-node automation-node--three"><small>03</small> ARTA</div>
+              <div class="automation-node automation-node--four"><small>04</small> Report</div>
+              <span class="automation-line automation-line--one"><i></i></span>
+              <span class="automation-line automation-line--two"><i></i></span>
+              <span class="automation-line automation-line--three"><i></i></span>
+              <div class="automation-metric"><strong>97%</strong><span>effort removed</span></div>
+            </div>
+            <div class="project__content">
+              <p class="project__meta">Professional / Python automation / 2025-2026</p>
+              <h3>Audio test automation</h3>
+              <p>As sole developer during a 13-month internship, I connected CANoe, pywinauto RPA, and ARTA into one production workflow. Test effort fell from 48 to 1.5 man-hours per cycle while most manual annotation errors were removed.</p>
+              <ul class="project__tags" aria-label="Project technologies">
+                <li>Python</li><li>RPA</li><li>CANoe</li><li>Requirements</li><li>Deployment</li>
+              </ul>
+              <a class="text-link" href="https://github.com/stephenkwr/CANoe_automation" target="_blank" rel="noopener noreferrer">View public code <span aria-hidden="true">&#8599;</span></a>
+            </div>
+          </article>
+
+          <article class="project project--reverse reveal" data-tilt>
+            <div class="project__visual parkcast-visual" aria-hidden="true">
+              <div class="map-grid">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <span class="map-marker map-marker--one"></span>
+              <span class="map-marker map-marker--two"></span>
+              <span class="map-marker map-marker--three"></span>
+              <span class="map-marker map-marker--four"></span>
+              <span class="map-marker map-marker--five"></span>
+              <div class="parkcast-chart">
+                <span style="--bar: 68%"></span>
+                <span style="--bar: 42%"></span>
+                <span style="--bar: 83%"></span>
+                <span style="--bar: 55%"></span>
+                <span style="--bar: 74%"></span>
+              </div>
+              <div class="parkcast-readout"><strong>~2,000</strong><span>carparks / 5 min</span></div>
+            </div>
+            <div class="project__content">
+              <p class="project__meta">Data engineering / Python / 2026</p>
+              <h3>ParkCast</h3>
+              <p>A Singapore carpark intelligence pipeline that ingests keyless public data, builds tested analytics marts, and forecasts availability one to two hours ahead through a FastAPI dashboard.</p>
+              <ul class="project__tags" aria-label="Project technologies">
+                <li>Python</li><li>DuckDB</li><li>dbt</li><li>Airflow</li><li>MLflow</li><li>FastAPI</li>
+              </ul>
+              <a class="text-link" href="https://github.com/stephenkwr/Predictor" target="_blank" rel="noopener noreferrer">Explore the pipeline <span aria-hidden="true">&#8599;</span></a>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt>
+            <div class="project__visual engine-visual" aria-hidden="true">
+              <div class="engine-layer"><span>C++ CORE</span><small>runtime systems</small></div>
+              <div class="engine-connector"><i></i></div>
+              <div class="engine-layer"><span>MONO</span><small>scripting bridge</small></div>
+              <div class="engine-connector"><i></i></div>
+              <div class="engine-layer"><span>C# SCRIPTS</span><small>hot reload</small></div>
+              <p>BUILD / RELOAD / ITERATE</p>
+            </div>
+            <div class="project__content">
+              <p class="project__meta">Team engineering / C++ &amp; C# / 2023-2025</p>
+              <h3>Custom engine systems</h3>
+              <p>Across two DigiPen team projects, I built engine back-end and UI systems, integrated Mono C# scripting with a C++ engine, and added function-signature caching plus automatic DLL rebuilds for faster iteration.</p>
+              <ul class="project__tags" aria-label="Project technologies">
+                <li>C++</li><li>C#</li><li>Mono</li><li>Hot reload</li><li>Engine architecture</li>
+              </ul>
+              <p class="project__note">Left Behind / Ingenium / team coursework</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="repos" class="section repos" aria-labelledby="repos-title">
+      <div class="container">
+        <header class="section-heading section-heading--split reveal">
+          <div>
+            <p class="section-kicker">04 / GitHub</p>
+            <h2 id="repos-title">Public code,<br />live from GitHub.</h2>
+          </div>
+          <p>The latest public repositories that represent work I can discuss. This feed updates directly from GitHub.</p>
+        </header>
+
+        <div id="repos-grid" class="repo-grid" aria-live="polite" aria-busy="true">
+          <p class="repo-state"><span class="repo-loader" aria-hidden="true"></span>Loading repositories</p>
+        </div>
+
+        <a class="text-link repos__all" href="https://github.com/stephenkwr?tab=repositories" target="_blank" rel="noopener noreferrer">All public repositories <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__headline reveal">
+          <p class="section-kicker">05 / Contact</p>
+          <h2 id="contact-title">Give the repetitive<br />work to software.</h2>
+        </div>
+
+        <div class="contact__body reveal">
+          <p>I am based in Singapore and open to graduate and entry-level roles in automation, software tooling, testing, and systems engineering.</p>
+          <a class="contact__email" href="mailto:koh.weiren@gmail.com">koh.weiren@gmail.com <span aria-hidden="true">&#8599;</span></a>
+          <div class="contact__socials">
+            <a href="https://github.com/stephenkwr" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&#8599;</span></a>
+            <a href="https://www.linkedin.com/in/weirenkoh" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Koh Wei Ren · Built with plain HTML, CSS &amp; JS</p>
+    <div class="container footer__inner">
+      <p>&copy; 2026 Koh Wei Ren</p>
+      <p>Designed and built with HTML, CSS &amp; JavaScript</p>
+      <a href="#hero">Back to top <span aria-hidden="true">&#8593;</span></a>
     </div>
   </footer>
 
